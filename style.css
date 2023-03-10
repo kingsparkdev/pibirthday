@@ -1,0 +1,19 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background-color: #FFF;
+}
+
+input {
+    font-size: 32pt;
+}
+
+p {
+    font-size: 32pt;
+    color: #E51310;
+}
+
+canvas {
+    display: block;
+}
