@@ -2,6 +2,7 @@ let raw;
 let digits,
     searchBox;
 let indexP;
+let txt;
 
 function preload() {
     raw = loadStrings("pi.txt");
@@ -26,26 +27,26 @@ function indexOf(txt, search) {
     return -1;
 }
 
-function searchItUp() {
-    let search = searchBox.value();
-    console.log(search);
-
-    // let index = digits.indexOf(search, 2);
-
-    let index = indexOf(digits, search);
+function searchItUp(a) {
+    let index = indexOf(digits, a);
 
     if (index > 0) {
-        indexP.html(index - 1);
+        document.getElementById("numDigit").innerText = (String(index-1));
     } else {
-        indexP.html("not found in the first 1 billion digits");
+        document.getElementById("numDigit").innerText = ("10억 자리 이내에서 찾을 수 없습니다.");
     }
 }
 
+function button(){
+    txt = document.getElementById("text").value;
+    searchItUp(txt);
+}
+
+
 function setup() {
     noCanvas();
-
     digits = raw[0];
-    searchBox = createInput("");
-    searchBox.input(searchItUp);
-    indexP = createP("searching");
+    //searchBox = createInput("");
+    //txt.input(searchItUp);
+    //indexP = createP("searching");
 }

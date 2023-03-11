@@ -9,6 +9,23 @@
 
     </head>
     <body>
+        <img src="./Pi-symbol.svg" alt="파이" id="PiSymbol">
+        <div class="search-box">
+            <input class="search-txt" type="text" placeholder="생년월일을 입력해 주세요" id="text" onkeypress="show_number(event)">
+            <input type="button" value="찾기" onclick="button()"/>
+            <p id="numDigit"></p>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            function show_number(e) {
+                var code = e.code;
+                if(code=='Enter'){
+                    button();
+                }
+            }
+            
+        </script>
         <script src="pisearch.js"></script>
+        
     </body>
 </html>

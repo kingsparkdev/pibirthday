@@ -3,6 +3,14 @@ html {
     margin: 0;
     padding: 0;
     background-color: #FFF;
+    text-align: center;
+}
+
+#PiSymbol {
+    top: 5;
+    left: 50vw;
+    width: 10%;
+    height: 10%;
 }
 
 input {
@@ -11,9 +19,13 @@ input {
 
 p {
     font-size: 32pt;
-    color: #E51310;
+    color: black;
 }
 
 canvas {
     display: block;
 }
+
+.search-box {
+    margin-top: 30vh;
+  }
